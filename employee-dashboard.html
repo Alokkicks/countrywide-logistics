@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE | COUNTRYWIDE LOGISTICS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>COUNTRYWIDE LOGISTICS</h2>
+                <p>LOGISTICS MANAGEMENT SYSTEM</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Shipments</a>
+                <a href="#">My Tasks</a>
+                <a href="#">Deliveries</a>
+                <a href="#">Tracking</a>
+                <a href="#">Reports</a>
+                <a href="#">Messages</a>
+                <a href="#">Settings</a>
+
+            </nav>
+            <div class="log-out">
+                <span class="Log-out">Logout</span>
+
+                <i class="fa-solid fa-power-off"></i>
+
+
+
+            </div>
+
+
+        </aside>
+        <main class="main-content">
+            <nav class="top-navbar">
+                <div class="menu-icon">
+                    ☰
+                </div>
+                <div class="search-bar">
+                    <span class="search-icon">⌕</span>
+                    <input type="text" placeholder="Search shipments,tasks,deliveries...">
+                </div>
+                <div class="navbar-right">
+                    <div class="notification">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-count">14</span>
+                    </div>
+                    <div class="employee-info">
+                        <div class="employee-details">
+                            <h4>Alok Mishra</h4>
+                            <span>Employee</span>
+                        </div>
+                        <div class="dropdown-arrow">⌄</div>
+                    </div>
+                </div>
+            </nav>
+            <header class="top-header">
+                <div class="welcome-section">
+                    <h1>Welcome Back,Alok</h1>
+                    <p>Here's what's happening with your work today</p>
+                </div>
+                <div class="date">
+                    Saturday , 27th Aug2026
+                </div>
+            </header>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📦</div>
+                    <div class="stat-info">
+
+                        <p>Total Shipments</p>
+                        <h2>48</h2>
+                        <span class="positive">↑ 12% from last week</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-info">
+                        <p>Pending Tasks</p>
+                        <h2>21</h2>
+                        <span class="negative">↓ 5% from last week</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✓</div>
+                    <div class="stat-info">
+                        <p>Completed Deliveries</p>
+                        <h2>102</h2>
+                        <span class="positive">↑ 18% from last week</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🚚</div>
+                    <div class="stat-info">
+                        <p>In Transit</p>
+                        <h2>55</h2>
+                        <span class="No Change">No Change</span>
+                    </div>
+                </div>
+            </section>
+            <div class="dashboard-panels">
+                <section class="recent-shipments">
+                    <div class="section-heading">
+                        <h2>Recent Shipments</h2>
+                        <a href="#">View All →</a>
+                    </div>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Shipment Id</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Expected Delivery</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>CW-1024</td>
+                                <td>Kolkata</td>
+                                <td>Mumbai</td>
+                                <td>28 may 2026</td>
+                                <td>In Transit</td>
+                            </tr>
+                            <tr>
+                                <td>CW-1087</td>
+                                <td>Mumbai</td>
+                                <td>Delhi</td>
+                                <td>30 June 2026</td>
+                                <td>Pending</td>
+                            </tr>
+                            <tr>
+                                <td>CW-1092</td>
+                                <td>Delhi</td>
+                                <td>Bangalore</td>
+                                <td>14 Aug 2026</td>
+                                <td>Delivered</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="action-required">
+                    <div class="section-heading">
+                        <h2>Action Required</h2>
+                        <a href="#">View All →</a>
+                    </div>
+                    <div class="task">
+                        <p>Verify shipment CW-1024</p>
+                        <span class="status pending">Pending</span>
+                    </div>
+
+                    <div class="task">
+                        <p>Update Delivery Status</p>
+                        <span class="status in-transit">In progress</span>
+                    </div>
+
+                    <div class="task">
+                        <p>Track shipment CW-1084</p>
+                        <span class="status pending">In Transit</span>
+                    </div>
+
+                    <div class="task">
+                        <p>Check warehouse inventory</p>
+                        <span class="status pending">Pending</span>
+                    </div>
+
+
+                </section>
+                <div class="quick-actions-card">
+                    <h3>Quick Actions</h3>
+                    <div class="actions-grid">
+                        <button class="action-button">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>New Shipment</span>
+                        </button>
+                        <button class="action-button">
+                            <i class="fa-solid fa-search"></i>
+                            <span>Track Shipment</span>
+                        </button>
+                        <button class="action-button">
+                            <i class="fa-solid fa-file"></i>
+                            <span>Update Delivery Status</span>
+                        </button>
+                        <button class="action-button">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span>View Builty</span>
+                        </button>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <section class="bottom-section">
+
+
+            </section>
+
+
+
+
+
+        </main>
+    </div>
+</body>
+
+<footer class="dashboard-footer">
+
+    <p>© 2026 Countrywide Logistics. All rights reserved.</p>
+
+    <p>
+        Need help?
+        <a href="#">Contact Support</a>
+    </p>
+</footer>
+
+
+</html>

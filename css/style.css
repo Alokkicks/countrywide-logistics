@@ -1,9 +1,30 @@
 * {
+    box-sizing: border-box;
+}
+
+html,
+body {
+   
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main-content {
+    min-width: 0;
+}
+
+.dashboard-grid,
+.stats-grid {
+    min-width: 0;
+}
+* {
     margin: 0;
     padding: 0;
 
 
 }
+
+/* THE ENTIRE CODE STARTS HERE */
 
 .logo {
 
@@ -1093,18 +1114,21 @@ blockquote {
     width: 20px;
 }
 
+/* LOGIN PAGE */
+
 .login-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:  #181818;;
+    background-color: #181818;
+    ;
 }
 
 .login-container {
     width: 65%;
     border: 1px solid orange;
-    border-radius:16px;
+    border-radius: 16px;
     min-height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1145,25 +1169,31 @@ blockquote {
     font-size: 32px;
     color: #cfcfcf;
 }
+
 .login-content h2 {
     font-size: 36px;
     margin-bottom: 8px;
-    color: #1a1a1a;;
+    color: #1a1a1a;
+    ;
 }
+
 .login-content p {
     font-size: 28px;
     color: #666;
     margin-bottom: 30px;
     margin-top: 16px;
 }
-.login-form{
+
+.login-form {
     border: 1px solid #e0a13b;
     border-radius: 14px;
     padding: 28px;
 }
+
 .login-form .form-group {
     margin-bottom: 20px;
 }
+
 .login-form label {
     display: block;
     font-size: 20px;
@@ -1171,6 +1201,7 @@ blockquote {
     color: #222;
     font-weight: 600;
 }
+
 .login-form input {
     width: 100%;
     padding: 14px;
@@ -1181,6 +1212,7 @@ blockquote {
     color: white;
     box-sizing: border-box;
 }
+
 .login-form button {
     width: 100%;
     padding: 14px;
@@ -1191,4 +1223,626 @@ blockquote {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.login-error {
+    color: #d93025 !important;
+    font-size: 14px !important;
+    margin-bottom: 15px;
+    min-height: 20px;
+    font-family: arial, sans-serif;
+    margin: 10px 0;
+
+}
+
+
+/* EMPLOYEE PAGE */
+
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #0b1018;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    color: white;
+    border: 1px solid #344154
+}
+
+.main-content {
+    flex: 1;
+    background-color: #111827;
+}
+
+.sidebar h2 {
+    color: #f59e0b;
+    margin-bottom: 25px
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a {
+    color: #a0a8b8;
+    text-decoration: none;
+    padding: 12px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.log-out {
+    margin-top: 55px;
+    padding: 15px;
+    border: 1px solid #344154;
+    border-radius: 12px;
+    width: 45%;
+    word-spacing: 20px;
+}
+
+
+
+
+.sidebar nav a:hover {
+    background-color: #1f2937;
+    color: #f59e0b;
+}
+
+/* TOP NAVBAR AREA */
+/* =========================
+   TOP NAVBAR
+========================= */
+
+
+.top-navbar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+
+
+
+
+}
+
+
+/* Menu icon */
+
+.menu-icon {
+    font-size: 18px;
+    color: #d9dde3;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-bottom: 30px;
+
+}
+
+/* Search */
+
+.search-bar {
+    width: 430px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0 30px;
+    background-color: #101827;
+    border: 1px solid #344154;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.search-icon {
+    color: #9aa4b2;
+    font-size: 22px;
+}
+
+.search-bar input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+.search-bar input::placeholder {
+    color: #8b95a3;
+}
+
+/* Push employee section to the right */
+
+.navbar-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
+
+/* Notification */
+
+.notification {
+    position: relative;
+    font-size: 24px;
+    color: #d9dde3;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.notification-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e86f13;
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+/* Employee section */
+
+.employee-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 25px;
+    border-left: 1px solid #344154;
+    margin-bottom: 30px;
+}
+
+.employee-details h4 {
+    margin: 0;
+    color: #f1f1f1;
+    font-size: 15px;
+}
+
+.employee-details span {
+    color: #9aa4b2;
+    font-size: 13px;
+}
+
+.dropdown-arrow {
+    color: #9aa4b2;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+/* MAIN DASHBOARD CONTENT */
+.main-content {
+    flex: 1;
+    min-height: auto;
+    padding: 30px 40px;
+    background-color: #151e2d;
+}
+
+.top-header {
+    margin: 0;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    color: #a9b2c1;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* WELCOME SECTION */
+
+.welcome-section h1,
+.welcome-section p {
+    margin-bottom: 5px;
+
+
+
+}
+
+.welcome-section h1 {
+    color: #f1f1f1;
+    font-size: 20px;
+
+
+
+
+}
+
+.welcome-section p {
+    color: #9aa4b2;
+    font-size: 16px;
+
+
+
+}
+
+/* STATISTICS CARD */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 25px;
+
+}
+
+.stat-card {
+    background-color: #2c394a;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 2px 25px;
+    min-height: 150px;
+    width: 230px;
+    border: 1px solid #39485b;
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    background: #4a2a0a;
+
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 3px;
+
+}
+
+.positive {
+    color: #6fd14b;
+    font-size: 13px;
+}
+
+.negative {
+    color: red;
+    font-size: 13px;
+}
+
+.stat-card p {
+    color: #a9b2c1;
+    font-size: 18px;
+
+}
+
+.stat-card h2 {
+    color: #f1f1f1;
+    font-size: 30px;
+    margin-bottom: 100 px;
+}
+
+/* DASHBOARD PANELS */
+.dashboard-panels {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.8fr;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.recent-shipments {
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+.recent-shipments table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.recent-shipments th,
+.recent-shipments td {
+    overflow: hidden;
+}
+
+
+.recent-shipments,
+.action-required {
+    background-color: #273344;
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 0px;
+
+}
+
+
+
+.my-tasks {
+    width: 90%;
+    min-height: 345px;
+    height: 100%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+
+}
+
+.section-heading h2 {
+    color: #f1f1f1;
+    font-size: 20px;
+}
+
+.section-heading a {
+    color: #ff9f1c;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+th,
+td {
+    padding: 18px 24px;
+    text-align: left;
+    color: #f1f5f9;
+    border-bottom: 1px solid #3a4555
+}
+
+.th {
+    color: #f1f5f9;
+    font-size: 14px;
+
+
+}
+
+.tr {
+    border-bottom: 1px solid #3a4555;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 2px;
+    border-bottom: 1px solid #3a4555;
+}
+
+.task p {
+    color: #e5e7eb;
+}
+
+.status {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.pending {
+    color: #ffb347;
+}
+
+.in-transit {
+    color: #f5c16c;
+}
+
+.bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+
+}
+
+.upcoming-card,
+.quick-actions-card {
+    background-color: #273344;
+    border: 1px solid #293442;
+    color: white;
+    border-radius: 6px;
+    padding: 16px;
+    min-height: px;
+}
+
+.quick-actions-card {
+    font-weight: 400;
+    font-size: 16px;
+    min-height: 300px;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+
+
+}
+
+.actions-grid {
+    background-color: #273344;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.action-button {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #0b1015;
+    border: 1px solid #293442;
+    box-sizing: border-box  ;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.action-button i {
+    font-size: 24px;
+    color: #ff7a00;
+}
+
+.action-button span {
+    font-size: 14px;
+}
+
+/* footer employee */
+.dashboard-footer {
+
+    padding: 18px 15px;
+    border-top: 1px solid #344154;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #151e2d !important;
+    color: #9aa4b2 !important;
+    font-size: 14px;
+}
+
+.dashboard-footer p {
+    margin: 0;
+}
+
+.dashboard-footer a {
+    color: #ff8a1f;
+    text-decoration: none;
+}
+
+.dashboard-footer a:hover {
+    text-decoration: underline;
+}
+/* ========================================
+   DESKTOP RESPONSIVE DESIGN
+   ======================================== */
+
+
+/* -------- LARGE DESKTOP (1600px and below) -------- */
+
+@media (max-width: 1600px) {
+
+    .main-content {
+        padding: 25px 30px;
+    }
+
+    .stats-{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1.5fr 1fr 0.8fr;
+        gap: 20px;
+    }
+
+}
+
+
+/* -------- NORMAL LAPTOP / DESKTOP (1440px and below) -------- */
+
+@media (max-width: 1440px) {
+
+    .sidebar {
+        width: 240px;
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+
+    .stats-card {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .dashboard-panels{
+        grid-template-columns: 1.4fr 1fr 0.8fr;
+        gap: 18px;
+    }
+
+    .recent-shipments,
+    .action-required,
+    .quick-actions-card {
+        min-width: 0;
+    }
+
+}
+
+
+/* -------- SMALL LAPTOP (1366px and below) -------- */
+
+@media (max-width: 1366px) {
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .dashboard-panels {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 15px;
+    }
+    .recent-shipments,
+    .action-required{
+        grid-column: auto;
+    }
+    .quick-actions-card{
+        grid-column: 1 / -1;
+    }
+
+    .recent-shipments,
+    .action-required,
+    .quick-actions-card {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+
+/* -------- MINIMUM SUPPORTED LAPTOP -------- */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        padding: 18px;
+    }
+
+    .dashboard-panels{
+        grid-template-columns: 1.2fr 1fr 0.9fr;
+        gap: 12px;
+    }
+
+    .stat-card{
+        gap: 12px;
+    }
+
 }
