@@ -31,7 +31,7 @@ async function loadShipments() {
 
         const token = localStorage.getItem("token");
         const response = await fetch(
-            "http://localhost:5000/api/shipments",
+            "https://countrywide-logistics.onrender.com/api/shipments",
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -196,7 +196,7 @@ async function findShipment(trackingId) {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/shipments/tracking/${encodeURIComponent(cleanId)}`
+            `https://countrywide-logistics.onrender.com/api/shipments/tracking/${encodeURIComponent(cleanId)}`
         );
 
 
@@ -621,7 +621,7 @@ async function updatePayment(shipment) {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/shipments/payment",
+                "https://countrywide-logistics.onrender.com/api/shipments/payment",
                 {
                     method: "POST",
 

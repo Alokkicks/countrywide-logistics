@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.log("Authorization header:", `Bearer ${token}`);
 
             const response = await fetch(
-                "http://localhost:5000/api/quotes",
+                "https://countrywide-logistics.onrender.com/api/quotes",
                 {
                     headers: {
                         "Authorization": `Bearer ${token}`

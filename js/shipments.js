@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/shipments",
+                "https://countrywide-logistics.onrender.com/api/shipments",
                 {
                     headers: {
                         "Authorization": `Bearer ${token}`

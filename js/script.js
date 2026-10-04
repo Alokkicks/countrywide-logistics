@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/shipments",
+                "https://countrywide-logistics.onrender.com/api/shipments",
                 {
                     headers: {
                         "Authorization": `Bearer ${token}`
@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const response = await fetch(
 
-                        `http://localhost:5000/api/shipments/${encodeURIComponent(selectedShipmentId)}/status`,
+                        `https://countrywide-logistics.onrender.com/api/shipments/${encodeURIComponent(selectedShipmentId)}/status`,
 
                         {
                             method: "PATCH",
@@ -768,7 +768,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             const token = localStorage.getItem("token");
 
-            const response = await fetch("http://localhost:5000/api/quotes", {
+            const response = await fetch("https://countrywide-logistics.onrender.com/api/quotes", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
 
                 const response = await fetch(
-                    `http://localhost:5000/api/master-data?type=goods&search=${encodeURIComponent(searchValue)}`
+                    `https://countrywide-logistics.onrender.com/api/master-data?type=goods&search=${encodeURIComponent(searchValue)}`
                 );
 
                 const data = await response.json();
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
 
                 const response = await fetch(
-                    `http://localhost:5000/api/master-data?type=consignor&search=${encodeURIComponent(searchValue)}`
+                    `https://countrywide-logistics.onrender.com/api/master-data?type=consignor&search=${encodeURIComponent(searchValue)}`
                 );
 
 
@@ -366,7 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
 
                 const response = await fetch(
-                    `http://localhost:5000/api/master-data?type=consignee&search=${encodeURIComponent(searchValue)}`
+                    `https://countrywide-logistics.onrender.com/api/master-data?type=consignee&search=${encodeURIComponent(searchValue)}`
                 );
 
 
@@ -1035,7 +1035,7 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
 
                 const response = await fetch(
-                    "http://localhost:5000/api/shipments",
+                    "https://countrywide-logistics.onrender.com/api/shipments",
                     {
                         method: "POST",
 
@@ -1103,7 +1103,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     try {
 
                         const masterResponse = await fetch(
-                            "http://localhost:5000/api/master-data",
+                            "https://countrywide-logistics.onrender.com/api/master-data",
                             {
                                 method: "POST",
 

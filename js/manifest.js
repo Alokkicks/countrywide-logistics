@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const response =
                 await fetch(
-                    "http://localhost:5000/api/shipments",
+                    "https://countrywide-logistics.onrender.com/api/shipments",
                     {
                         headers: {
                             "Authorization": `Bearer ${token}`
@@ -554,7 +554,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const response =
                     await fetch(
-                        "http://localhost:5000/api/manifests",
+                        "https://countrywide-logistics.onrender.com/api/manifests",
                         {
                             method: "POST",
 
@@ -698,7 +698,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const response =
                     await fetch(
-                        `http://localhost:5000/api/manifests/${encodeURIComponent(challan)}`,
+                        `https://countrywide-logistics.onrender.com/api/manifests/${encodeURIComponent(challan)}`,
                         {
                             headers: {
                                 Authorization: `Bearer ${localStorage.getItem("token")}`
