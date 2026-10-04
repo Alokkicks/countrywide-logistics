@@ -1,31 +1,72 @@
 const loginForm = document.querySelector(".login-form");
 const errorMessage = document.querySelector(".login-error");
 
-loginForm.addEventListener("submit", function(event) {
+loginForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    // Clear any previous error first
+    // Clear previous error
     errorMessage.textContent = "";
 
-    const username = document.getElementById("username").value;
+    const email = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value;
 
-    if (username === "admin" && password === "admin123") {
-        window.location.href = "admin-dashboard.html";
+    // Check empty fields
+    if (!email || !password) {
+        errorMessage.textContent = "Email and password are required";
+        return;
+    }
 
-    } else if (username === "employee" && password === "employee123") {
-        window.location.href = "employee-dashboard.html";
+    try {
+        // Send login request to backend
+        const response = await fetch("http://localhost:5000/api/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            })
+        });
 
-    } else {
-        errorMessage.textContent = "Invalid username or password";
+        const data = await response.json();
+
+        // Login failed
+        if (!response.ok) {
+            errorMessage.textContent =
+                data.message || "Invalid email or password";
+            return;
+        }
+
+        // Login successful
+        console.log("Login successful");
+        console.log("User:", data.user);
+
+        // Save JWT token
+        localStorage.setItem("token", data.token);
+
+        // Save user information
+        localStorage.setItem("user", JSON.stringify(data.user));
+
+        /*
+         * For now we don't have a separate admin dashboard.
+         * Both admin and employee will enter the employee dashboard.
+         */
+        window.location.replace( "employee-dashboard.html");
+
+    } catch (error) {
+        console.error("Login error:", error);
+        errorMessage.textContent =
+            "Unable to connect to server. Please try again.";
     }
 });
 
-// Remove the error as soon as the user types
-document.getElementById("username").addEventListener("input", function() {
+
+// Remove error when user starts typing
+document.getElementById("username").addEventListener("input", function () {
     errorMessage.textContent = "";
 });
 
-document.getElementById("password").addEventListener("input", function() {
+document.getElementById("password").addEventListener("input", function () {
     errorMessage.textContent = "";
 });

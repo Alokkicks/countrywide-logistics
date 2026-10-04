@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shipments | Countrywide Logistics</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Shipments CSS -->
+    <link rel="stylesheet" href="css/shipments.css">
+
+
+    <!-- =====================================================
+         SHIPMENTS PAGE SAFETY / TABLE FIXES
+    ====================================================== -->
+
+    <style>
+        .shipments-main {
+            min-width: 0;
+            overflow-x: hidden;
+        }
+
+
+        .shipments-table-card {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+
+        .table-wrapper {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-y: visible;
+        }
+
+
+        .shipments-table {
+            width: 100%;
+            min-width: 1120px;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+
+        .shipments-table th,
+        .shipments-table td {
+            box-sizing: border-box;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+        /* C-Note */
+        .shipments-table th:nth-child(1),
+        .shipments-table td:nth-child(1) {
+            width: 12%;
+        }
+
+
+        /* Consignor */
+        .shipments-table th:nth-child(2),
+        .shipments-table td:nth-child(2) {
+            width: 15%;
+        }
+
+
+        /* Consignee */
+        .shipments-table th:nth-child(3),
+        .shipments-table td:nth-child(3) {
+            width: 15%;
+        }
+
+
+        /* Destination */
+        .shipments-table th:nth-child(4),
+        .shipments-table td:nth-child(4) {
+            width: 10%;
+        }
+
+
+        /* Booking Date */
+        .shipments-table th:nth-child(5),
+        .shipments-table td:nth-child(5) {
+            width: 10%;
+        }
+
+
+        /* Weight */
+        .shipments-table th:nth-child(6),
+        .shipments-table td:nth-child(6) {
+            width: 8%;
+        }
+
+
+        /* Packages */
+        .shipments-table th:nth-child(7),
+        .shipments-table td:nth-child(7) {
+            width: 7%;
+        }
+
+
+        /* Invoice */
+        .shipments-table th:nth-child(8),
+        .shipments-table td:nth-child(8) {
+            width: 11%;
+        }
+
+
+        /* Status */
+        .shipments-table th:nth-child(9),
+        .shipments-table td:nth-child(9) {
+            width: 9%;
+        }
+
+
+        /* Amount */
+        .shipments-table th:nth-child(10),
+        .shipments-table td:nth-child(10) {
+            width: 9%;
+        }
+
+
+        /* Action */
+        .shipments-table th:nth-child(11),
+        .shipments-table td:nth-child(11) {
+            width: 8%;
+        }
+
+
+        .shipments-table td:last-child,
+        .shipments-table th:last-child {
+            text-align: center;
+        }
+
+
+        .shipment-modal {
+            z-index: 9999;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="shipments-page">
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside class="shipments-sidebar">
+
+
+            <!-- Logo -->
+
+            <div class="sidebar-logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+
+                <div class="logo-text">
+                    <span>COUNTRYWIDE</span>
+                    <strong>LOGISTICS</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="shipments-sidebar-nav">
+
+
+                <a href="employee-dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="new-shipment.html">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    <span>New Shipment</span>
+
+                </a>
+
+
+                <a href="shipments.html" class="active">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                    <span>Shipments</span>
+
+                </a>
+
+
+                <a href="manifest.html">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <span>Manifest</span>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <span>Deliveries</span>
+
+                </a>
+
+
+                <a href="tracking.html">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>Tracking</span>
+
+                </a>
+
+
+                <a href="reports.html">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <span>Reports</span>
+
+                </a>
+
+
+                <a href="settings.html">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+
+                <div class="employee-profile">
+
+                    <div class="employee-avatar">
+                        AM
+                    </div>
+
+
+                    <div class="employee-details">
+
+                        <strong>Alok Kumar</strong>
+
+                        <span>Employee</span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="#" class="logout-link">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+        ====================================================== -->
+
+        <main class="shipments-main">
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <header class="shipments-header">
+
+
+                <div class="header-left">
+
+                    <div class="header-title">
+
+                        <p class="section-tag">
+                            SHIPMENT MANAGEMENT
+                        </p>
+
+
+                        <h1>
+                            Shipments
+                        </h1>
+
+
+                        <p>
+                            View and manage all shipments.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="header-right">
+
+                    <a href="new-shipment.html" class="new-shipment-btn">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        New Shipment
+
+                    </a>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 SEARCH / FILTER TOOLBAR
+            ================================================== -->
+
+            <section class="shipments-toolbar">
+
+
+                <!-- Search -->
+
+                <div class="shipment-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" id="shipment-search"
+                        placeholder="Search by C-Note, Consignor, Consignee or Invoice No..." autocomplete="off">
+
+                </div>
+
+
+                <!-- Status Filter -->
+
+                <div class="shipment-filter">
+
+                    <select id="status-filter">
+
+                        <option value="all">
+                            All Status
+                        </option>
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="in-transit">
+                            In Transit
+                        </option>
+
+                        <option value="delivered">
+                            Delivered
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Refresh -->
+
+                <button type="button" id="refresh-shipments" class="refresh-btn" title="Refresh shipments">
+
+                    <i class="fa-solid fa-rotate"></i>
+
+                </button>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SHIPMENTS TABLE CARD
+            ================================================== -->
+
+            <section class="shipments-table-card">
+
+
+                <!-- Table Header -->
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h2>
+                            All Shipments
+                        </h2>
+
+
+                        <p id="shipment-count">
+                            0 shipments
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TABLE
+                ================================================== -->
+
+                <div class="table-wrapper">
+
+
+                    <table class="shipments-table">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    C-Note No.
+                                </th>
+
+
+                                <th>
+                                    Consignor
+                                </th>
+
+
+                                <th>
+                                    Consignee
+                                </th>
+
+
+                                <th>
+                                    Destination
+                                </th>
+
+
+                                <th>
+                                    Booking Date
+                                </th>
+
+
+                                <th>
+                                    Weight
+                                </th>
+
+
+                                <th>
+                                    Packages
+                                </th>
+
+
+                                <th>
+                                    Invoice No.
+                                </th>
+
+
+                                <!-- FIXED: STATUS COLUMN -->
+
+                                <th>
+                                    Status
+                                </th>
+
+
+                                <th>
+                                    Amount
+                                </th>
+
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <!-- JavaScript inserts shipments here -->
+
+                        <tbody id="shipments-table-body">
+
+                        </tbody>
+
+
+                    </table>
+
+
+
+                    <!-- =================================================
+                         EMPTY STATE
+                    ================================================== -->
+
+                    <div id="empty-state" class="empty-state">
+
+
+                        <div class="empty-icon">
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                        </div>
+
+
+                        <h3>
+                            No shipments found
+                        </h3>
+
+
+                        <p>
+                            Create your first shipment to see it here.
+                        </p>
+
+
+                        <a href="new-shipment.html" class="empty-state-btn">
+
+                            Create Shipment
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         VIEW SHIPMENT MODAL
+    ====================================================== -->
+
+    <div id="shipment-view-modal" class="shipment-modal">
+
+
+        <div class="shipment-modal-content">
+
+
+            <!-- MODAL HEADER -->
+
+            <div class="shipment-modal-header">
+
+
+                <div>
+
+                    <h2>
+                        Shipment Details
+                    </h2>
+
+
+                    <!-- Header C-Note -->
+
+                    <p id="modal-tracking-id">
+                        -
+                    </p>
+
+                </div>
+
+
+                <button type="button" id="close-shipment-modal" class="shipment-modal-close">
+
+                    &times;
+
+                </button>
+
+
+            </div>
+
+
+
+            <div class="shipment-modal-body">
+
+
+                <!-- =================================================
+                     CUSTOMER
+                ================================================== -->
+
+                <div class="modal-section">
+
+
+                    <h3>
+                        Consignor Information
+                    </h3>
+
+
+                    <div class="modal-grid">
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Consignor
+                            </span>
+
+                            <strong id="modal-consignor">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Consignee
+                            </span>
+
+                            <strong id="modal-consignee">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Consignor GSTIN
+                            </span>
+
+                            <strong id="modal-consignor-gstin">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Consignee GSTIN
+                            </span>
+
+                            <strong id="modal-consignee-gstin">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                C-Note Type
+                            </span>
+
+                            <strong id="modal-cnote-type">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Billing Party
+                            </span>
+
+                            <strong id="modal-billing-party">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SHIPMENT
+                ================================================== -->
+
+                <div class="modal-section">
+
+
+                    <h3>
+                        Shipment Information
+                    </h3>
+
+
+                    <div class="modal-grid">
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                C-Note No.
+                            </span>
+
+                            <!-- FIXED: UNIQUE ID -->
+
+                            <strong id="modal-cnote-no">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Invoice No.
+                            </span>
+
+                            <strong id="modal-invoice-no">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Status
+                            </span>
+
+                            <strong id="modal-status">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Booking Date
+                            </span>
+
+                            <strong id="modal-booking-date">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Booking Branch
+                            </span>
+
+                            <strong id="modal-booking-branch">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Booking From
+                            </span>
+
+                            <strong id="modal-booking-from">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Destination
+                            </span>
+
+                            <strong id="modal-destination">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     GOODS
+                ================================================== -->
+
+                <div class="modal-section">
+
+
+                    <h3>
+                        Goods & Package
+                    </h3>
+
+
+                    <div class="modal-grid">
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Type of Goods
+                            </span>
+
+                            <strong id="modal-goods">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Description
+                            </span>
+
+                            <strong id="modal-goods-description">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Actual Weight
+                            </span>
+
+                            <strong id="modal-actual-weight">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Chargeable Weight
+                            </span>
+
+                            <strong id="modal-chargeable-weight">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Packages
+                            </span>
+
+                            <strong id="modal-package-count">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Package Type
+                            </span>
+
+                            <strong id="modal-package-type">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Package Mode
+                            </span>
+
+                            <strong id="modal-package-mode">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     BILLING
+                ================================================== -->
+
+                <div class="modal-section">
+
+
+                    <h3>
+                        Billing Information
+                    </h3>
+
+
+                    <div class="modal-grid">
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Freight Rate
+                            </span>
+
+                            <strong id="modal-freight-rate">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Freight
+                            </span>
+
+                            <strong id="modal-freight">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                S.T. Charge
+                            </span>
+
+                            <strong id="modal-st-charge">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Delivery Charge
+                            </span>
+
+                            <strong id="modal-delivery-charge">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Labour Charge
+                            </span>
+
+                            <strong id="modal-labour-charge">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Other Charges
+                            </span>
+
+                            <strong id="modal-other-charges">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Adjustment
+                            </span>
+
+                            <strong id="modal-adjustment">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="modal-total">
+
+                        <span>
+                            Total Amount
+                        </span>
+
+                        <strong id="modal-total-amount">
+                            ₹ 0.00
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     MANIFEST
+                ================================================== -->
+
+                <div class="modal-section">
+
+
+                    <h3>
+                        Manifest Information
+                    </h3>
+
+
+                    <div class="modal-grid">
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Challan Number
+                            </span>
+
+                            <strong id="modal-challan-number">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                Manifest Date
+                            </span>
+
+                            <strong id="modal-manifest-date">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                From
+                            </span>
+
+                            <strong id="modal-manifest-from">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="modal-field">
+
+                            <span>
+                                To
+                            </span>
+
+                            <strong id="modal-manifest-to">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="js/auth-guard.js"></script>
+
+    <script src="js/shipments.js"></script>
+
+    <script src="js/logout.js"></script>
+
+
+</body>
+
+</html>

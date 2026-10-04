@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tracking | Countrywide Logistics</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Tracking CSS -->
+    <link rel="stylesheet" href="css/tracking.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="tracking-page">
+
+
+        <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+        <aside class="tracking-sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="tracking-sidebar-logo">
+
+                <div class="tracking-logo-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+
+                <div class="tracking-logo-text">
+
+                    <span>COUNTRYWIDE</span>
+
+                    <strong>LOGISTICS</strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="tracking-sidebar-nav">
+
+
+                <a href="employee-dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="new-shipment.html">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    <span>New Shipment</span>
+
+                </a>
+
+
+                <a href="shipments.html">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                    <span>Shipments</span>
+
+                </a>
+
+
+                <a href="manifest.html">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <span>Manifest</span>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <span>Deliveries</span>
+
+                </a>
+
+
+                <a href="tracking.html" class="active">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>Tracking</span>
+
+                </a>
+
+
+                <a href="reports.html">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <span>Reports</span>
+
+                </a>
+
+
+                <a href="settings.html">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+
+            </nav>
+
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="tracking-sidebar-bottom">
+
+
+                <div class="tracking-employee-profile">
+
+                    <div class="tracking-employee-avatar">
+                        AM
+                    </div>
+
+
+                    <div class="tracking-employee-details">
+
+                        <strong>Alok Kumar</strong>
+
+                        <span>Employee</span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="#" class="tracking-logout-link">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+        <main class="tracking-main">
+
+
+            <!-- =================================================
+             PAGE HEADER
+        ================================================== -->
+
+            <header class="tracking-header">
+
+
+                <div class="tracking-header-left">
+
+                    <p class="tracking-section-tag">
+                        SHIPMENT TRACKING
+                    </p>
+
+
+                    <h1>
+                        Tracking
+                    </h1>
+
+
+                    <p>
+                        Manage vehicle dispatches and track assigned consignments.
+                    </p>
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+             CREATE VEHICLE DISPATCH
+        ================================================== -->
+
+            <section class="tracking-create-card">
+
+
+                <div class="tracking-card-header">
+
+                    <div>
+
+                        <p class="tracking-card-tag">
+                            VEHICLE DISPATCH
+                        </p>
+
+                        <h2>
+                            Create Vehicle Dispatch
+                        </h2>
+
+                        <p>
+                            Enter vehicle and driver details, then assign consignments.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tracking-card-icon">
+
+                        <i class="fa-solid fa-truck-moving"></i>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 VEHICLE DETAILS
+            ================================================== -->
+
+                <div class="tracking-section">
+
+
+                    <div class="tracking-section-title">
+
+                        <i class="fa-solid fa-truck"></i>
+
+                        <span>
+                            Vehicle Details
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="tracking-form-grid">
+
+
+                        <!-- VEHICLE NUMBER -->
+
+                        <div class="tracking-form-group">
+
+                            <label for="vehicle-number">
+                                Vehicle Number
+                            </label>
+
+                            <input type="text" id="vehicle-number" placeholder="Enter vehicle number">
+
+                        </div>
+
+
+
+                        <!-- OWNER NAME -->
+
+                        <div class="tracking-form-group">
+
+                            <label for="owner-name">
+                                Vehicle Owner Name
+                            </label>
+
+                            <input type="text" id="owner-name" placeholder="Enter owner name">
+
+                        </div>
+
+
+
+                        <!-- OWNER AADHAAR -->
+
+                        <div class="tracking-form-group">
+
+                            <label for="owner-aadhaar">
+                                Owner Aadhaar
+                            </label>
+
+                            <input type="text" id="owner-aadhaar" maxlength="12" placeholder="Enter Aadhaar number">
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 DRIVER DETAILS
+            ================================================== -->
+
+                <div class="tracking-section">
+
+
+                    <div class="tracking-section-title">
+
+                        <i class="fa-solid fa-id-card"></i>
+
+                        <span>
+                            Driver Details
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="tracking-form-grid">
+
+
+                        <!-- DRIVER NAME -->
+
+                        <div class="tracking-form-group">
+
+                            <label for="driver-name">
+                                Driver Name
+                            </label>
+
+                            <input type="text" id="driver-name" placeholder="Enter driver name">
+
+                        </div>
+
+
+
+                        <!-- DRIVER PHONE -->
+
+                        <div class="tracking-form-group">
+
+                            <label for="driver-phone">
+                                Driver Phone
+                            </label>
+
+                            <input type="tel" id="driver-phone" placeholder="Enter phone number">
+
+                        </div>
+
+
+
+                        <!-- DRIVER DL -->
+
+                        <div class="tracking-form-group">
+
+                            <label for="driver-dl">
+                                Driving Licence No.
+                            </label>
+
+                            <input type="text" id="driver-dl" placeholder="Enter DL number">
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 ROUTE DETAILS
+            ================================================== -->
+
+                <div class="tracking-section">
+
+
+                    <div class="tracking-section-title">
+
+                        <i class="fa-solid fa-route"></i>
+
+                        <span>
+                            Route Details
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="tracking-form-grid">
+
+
+                        <!-- ORIGIN -->
+
+                        <div class="tracking-form-group">
+
+                            <label for="dispatch-origin">
+                                Origin
+                            </label>
+
+                            <input type="text" id="dispatch-origin" placeholder="Enter origin">
+
+                        </div>
+
+
+
+                        <!-- DESTINATION -->
+
+                        <div class="tracking-form-group">
+
+                            <label for="dispatch-destination">
+                                Destination
+                            </label>
+
+                            <input type="text" id="dispatch-destination" placeholder="Enter destination">
+
+                        </div>
+
+
+
+                        <!-- DISPATCH DATE -->
+
+                        <div class="tracking-form-group">
+
+                            <label for="dispatch-date">
+                                Dispatch Date
+                            </label>
+
+                            <input type="date" id="dispatch-date">
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 CONSIGNMENT POOL
+            ================================================== -->
+
+                <div class="tracking-section">
+
+
+                    <div class="tracking-section-title">
+
+                        <i class="fa-solid fa-boxes-stacked"></i>
+
+                        <span>
+                            Assign Consignments
+                        </span>
+
+                    </div>
+
+
+                    <p class="tracking-section-description">
+
+                        Select the consignments that will travel with this vehicle.
+
+                    </p>
+
+
+
+                    <!-- SEARCH -->
+
+                    <div class="tracking-shipment-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" id="tracking-shipment-search"
+                            placeholder="Search by C/Note No., consignor, consignee or destination...">
+
+                    </div>
+
+
+
+                    <!-- SHIPMENT TABLE -->
+
+                    <div class="tracking-table-wrapper">
+
+
+                        <table class="tracking-shipment-table">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        <input type="checkbox" id="select-all-tracking">
+                                    </th>
+
+                                    <th>
+                                        C/Note No.
+                                    </th>
+
+                                    <th>
+                                        Consignor
+                                    </th>
+
+                                    <th>
+                                        Consignee
+                                    </th>
+
+                                    <th>
+                                        Origin
+                                    </th>
+
+                                    <th>
+                                        Destination
+                                    </th>
+
+                                    <th>
+                                        Packages
+                                    </th>
+
+                                    <th>
+                                        Weight
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="tracking-shipments-body">
+
+                                <!-- Shipments will load here -->
+
+                            </tbody>
+
+
+                        </table>
+
+
+                    </div>
+
+
+
+                    <!-- EMPTY STATE -->
+
+                    <div id="tracking-empty-state" class="tracking-empty-state">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                        <h3>
+                            No consignments available
+                        </h3>
+
+                        <p>
+                            Load shipments to assign them to this vehicle.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- SELECTED COUNT -->
+
+                    <div class="tracking-selection-footer">
+
+                        <span>
+
+                            Selected:
+
+                            <strong id="tracking-selected-count">
+                                0
+                            </strong>
+
+                            consignments
+
+                        </span>
+
+
+                        <button type="button" id="create-dispatch-btn" class="tracking-create-btn">
+
+                            <i class="fa-solid fa-truck-fast"></i>
+
+                            Create Dispatch
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+             EXISTING VEHICLE DISPATCHES
+        ================================================== -->
+
+            <section class="tracking-dispatch-card">
+
+
+                <div class="tracking-card-header">
+
+
+                    <div>
+
+                        <p class="tracking-card-tag">
+                            DISPATCH HISTORY
+                        </p>
+
+                        <h2>
+                            Vehicle Dispatches
+                        </h2>
+
+                        <p>
+                            View vehicles and the consignments assigned to them.
+                        </p>
+
+                    </div>
+
+
+                    <button type="button" id="load-dispatches-btn" class="tracking-secondary-btn">
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        Refresh
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- SEARCH DISPATCH -->
+
+                <div class="tracking-dispatch-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" id="dispatch-search"
+                        placeholder="Search vehicle number, driver, origin or destination...">
+
+                </div>
+
+
+
+                <!-- DISPATCH TABLE -->
+
+                <div class="tracking-table-wrapper">
+
+
+                    <table class="tracking-dispatch-table">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Vehicle No.
+                                </th>
+
+                                <th>
+                                    Driver
+                                </th>
+
+                                <th>
+                                    Driver Phone
+                                </th>
+
+                                <th>
+                                    Origin
+                                </th>
+
+                                <th>
+                                    Destination
+                                </th>
+
+                                <th>
+                                    Dispatch Date
+                                </th>
+
+                                <th>
+                                    Consignments
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="dispatches-body">
+
+                            <!-- Dispatches will load here -->
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+
+                <!-- EMPTY DISPATCH STATE -->
+
+                <div id="dispatch-empty-state" class="tracking-empty-state">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h3>
+                        No vehicle dispatches yet
+                    </h3>
+
+                    <p>
+                        Created vehicle dispatches will appear here.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+    <!-- DISPATCH DETAILS MODAL -->
+    <div id="dispatch-details-modal" class="dispatch-modal">
+        <div class="dispatch-modal-content">
+
+            <div class="dispatch-modal-header">
+                <div>
+                    <h2>Vehicle Dispatch Details</h2>
+                    <span id="dispatch-modal-subtitle"></span>
+                </div>
+
+                <button type="button" id="close-dispatch-modal" class="dispatch-modal-close">
+                    &times;
+                </button>
+            </div>
+
+            <div id="dispatch-details-content"></div>
+
+            <div class="dispatch-modal-footer">
+                <button type="button" id="print-dispatch-btn" class="dispatch-print-btn">
+                    <i class="fa-solid fa-print"></i>
+                    Print Dispatch
+                </button>
+
+                <button type="button" id="close-dispatch-modal-bottom" class="dispatch-close-btn">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Tracking JavaScript -->
+    <script src="js/tracking.js"></script>
+
+
+</body>
+
+</html>

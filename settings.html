@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Countrywide Logistics</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Existing Logistics CSS -->
+    <link rel="stylesheet" href="css/shipments.css">
+
+    <!-- Settings CSS -->
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+
+<body>
+
+<div class="shipments-page">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="shipments-sidebar">
+
+        <!-- Logo -->
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+
+            <div class="logo-text">
+                <span>COUNTRYWIDE</span>
+                <strong>LOGISTICS</strong>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="shipments-sidebar-nav">
+
+            <a href="employee-dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="new-shipment.html">
+                <i class="fa-solid fa-box"></i>
+                <span>New Shipment</span>
+            </a>
+
+            <a href="shipments.html">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Shipments</span>
+            </a>
+
+            <a href="manifest.html">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Manifest</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>Deliveries</span>
+            </a>
+
+            <a href="tracking.html">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Tracking</span>
+            </a>
+
+            <a href="reports.html">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Reports</span>
+            </a>
+
+            <a href="settings.html" class="active">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+        <div class="sidebar-bottom">
+
+            <div class="employee-profile">
+
+                <div class="employee-avatar">
+                    AM
+                </div>
+
+                <div class="employee-details">
+                    <strong>Countrywide Logistics</strong>
+                    <span>Employee</span>
+                </div>
+
+            </div>
+
+            <a href="#" class="sidebar-logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="shipments-main">
+
+        <!-- Page Header -->
+
+        <header class="shipments-header">
+
+            <div class="header-left">
+
+                <div class="header-title">
+
+                    <p class="section-tag">
+                        SYSTEM
+                    </p>
+
+                    <h1>Settings</h1>
+
+                    <p>
+                        Manage your account and application preferences.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <a href="new-shipment.html" class="new-shipment-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    New Shipment
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= SETTINGS ================= -->
+
+        <section class="settings-content">
+
+
+            <!-- Profile -->
+
+            <div class="settings-card">
+
+                <div class="settings-card-header">
+
+                    <div class="settings-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+                        <h2>Profile</h2>
+                        <p>Your employee account information</p>
+                    </div>
+
+                </div>
+
+                <div class="settings-info">
+
+                    <div class="settings-row">
+                        <span>Name</span>
+                        <strong>Countrywide Logistics</strong>
+                    </div>
+
+                    <div class="settings-row">
+                        <span>Role</span>
+                        <strong>Employee</strong>
+                    </div>
+
+                    <div class="settings-row">
+                        <span>Account Status</span>
+                        <strong class="status-active">Active</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Security -->
+
+            <div class="settings-card">
+
+                <div class="settings-card-header">
+
+                    <div class="settings-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+                        <h2>Security</h2>
+                        <p>Manage your account security</p>
+                    </div>
+
+                </div>
+
+                <div class="settings-action">
+
+                    <div>
+                        <strong>Password</strong>
+                        <p>Keep your account secure with a strong password.</p>
+                    </div>
+
+                    <button type="button">
+                        Change Password
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Preferences -->
+
+            <div class="settings-card">
+
+                <div class="settings-card-header">
+
+                    <div class="settings-icon">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+
+                    <div>
+                        <h2>Preferences</h2>
+                        <p>Application preferences</p>
+                    </div>
+
+                </div>
+
+                <div class="settings-action">
+
+                    <div>
+                        <strong>Notifications</strong>
+                        <p>Manage shipment and system notifications.</p>
+                    </div>
+
+                    <label class="settings-toggle">
+
+                        <input type="checkbox" checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Account -->
+
+            <div class="settings-card danger-card">
+
+                <div class="settings-card-header">
+
+                    <div class="settings-icon">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </div>
+
+                    <div>
+                        <h2>Account</h2>
+                        <p>Sign out from this device</p>
+                    </div>
+
+                </div>
+
+                <div class="settings-action">
+
+                    <div>
+                        <strong>Logout</strong>
+                        <p>End your current employee session.</p>
+                    </div>
+
+                    <a href="#" class="settings-logout sidebar-logout">
+                        Logout
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- Authentication Guard -->
+<script src="js/auth-guard.js"></script>
+
+<!-- Logout -->
+<script src="js/script.js"></script>
+
+<!-- Settings Logout -->
+<script>
+    document.querySelectorAll(".sidebar-logout").forEach(function (logoutButton) {
+
+        logoutButton.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+
+            window.location.replace("login.html");
+        });
+
+    });
+</script>
+
+</body>
+
+</html>

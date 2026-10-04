@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports - Countrywide Logistics</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Reports CSS -->
+    <link rel="stylesheet" href="css/reports.css">
+</head>
+
+<body>
+
+    <div class="reports-page">
+
+        <!-- =========================================
+             SIDEBAR
+        ========================================== -->
+
+        <aside class="reports-sidebar">
+
+            <!-- LOGO -->
+
+            <div class="reports-logo">
+
+                <div class="reports-logo-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+
+                <div class="reports-logo-text">
+                    <strong>COUNTRYWIDE</strong>
+                    <span>LOGISTICS</span>
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="reports-nav">
+
+                <a href="employee-dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="new-shipment.html">
+                    <i class="fa-solid fa-box"></i>
+                    <span>New Shipment</span>
+                </a>
+
+                <a href="shipments.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Shipments</span>
+                </a>
+
+                <a href="manifest.html">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Manifest</span>
+                </a>
+
+                <a href="deliveries.html">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <span>Deliveries</span>
+                </a>
+
+                <a href="tracking.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Tracking</span>
+                </a>
+
+                <a href="reports.html" class="active">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Reports</span>
+                </a>
+
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+
+            <!-- PROFILE -->
+
+            <div class="reports-sidebar-profile">
+
+                <div class="reports-profile-avatar">
+                    AM
+                </div>
+
+                <div class="reports-profile-info">
+
+                    <div class="reports-profile-name">
+                        Alok Kumar
+                    </div>
+
+                    <div class="reports-profile-role">
+                        Employee
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOGOUT -->
+
+            <a href="#" class="sidebar-logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </aside>
+
+
+        <!-- =========================================
+             MAIN CONTENT
+        ========================================== -->
+
+        <main class="reports-main">
+
+
+            <!-- PAGE HEADER -->
+
+            <header class="reports-header">
+
+                <div class="eyebrow">
+                    BUSINESS REPORTS
+                </div>
+
+                <h1>
+                    Reports
+                </h1>
+
+                <p>
+                    Generate bills, check outstanding amounts
+                    and track billing records.
+                </p>
+
+            </header>
+
+
+            <!-- =========================================
+                 REPORT TABS / SLIDER
+            ========================================== -->
+
+            <section class="report-tabs">
+
+                <button class="report-tab active" data-tab="freight" type="button">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    <span>
+                        Freight Bill
+                    </span>
+
+                </button>
+
+
+                <button class="report-tab" data-tab="outstanding" type="button">
+
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+
+                    <span>
+                        Outstanding Bill
+                    </span>
+
+                </button>
+
+
+                <button class="report-tab" data-tab="tracker" type="button">
+
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                    <span>
+                        Bill Tracker
+                    </span>
+
+                </button>
+
+
+                <button class="report-tab" data-tab="generated" type="button">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span>
+                        Generated Bills
+                    </span>
+
+                </button>
+
+
+                <!-- BLUE SLIDER -->
+
+                <div class="tab-slider"></div>
+
+            </section>
+
+
+            <!-- =========================================
+                 FREIGHT BILL
+            ========================================== -->
+
+            <section class="report-panel active" id="freight-panel">
+
+                <div class="panel-heading">
+
+                    <div class="panel-icon">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Freight Bill
+                        </h2>
+
+                        <p>
+                            Enter a C-Note number to generate
+                            the bill for that particular consignment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="freight-form" class="search-form">
+
+
+                    <div class="input-group">
+
+                        <label for="freight-cnote">
+                            C-Note No.
+                        </label>
+
+                        <input id="freight-cnote" type="text" placeholder="Enter C-Note / Tracking No."
+                            autocomplete="off" required>
+
+                    </div>
+
+
+                    <button class="primary-btn" type="submit">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        Find C-Note
+
+                    </button>
+
+                </form>
+
+
+                <div id="freight-result" class="result-area">
+                </div>
+
+            </section>
+            <!-- PAYMENT UPDATE -->
+
+            <section class="payment-update-section">
+
+                <div class="panel-heading">
+
+                    <div class="panel-icon">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+
+                    <div>
+                        <h2>Update Payment</h2>
+                        <p>
+                            Record a payment received against a C-Note.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form id="payment-form" class="search-form">
+
+                    <div class="input-group">
+
+                        <label for="payment-cnote">
+                            C-Note No.
+                        </label>
+
+                        <input id="payment-cnote" type="text" placeholder="Enter C-Note / Tracking No."
+                            autocomplete="off" required>
+
+                    </div>
+
+
+                    <button class="primary-btn" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Find Shipment
+                    </button>
+
+                </form>
+
+
+                <div id="payment-shipment-result" class="result-area"></div>
+
+            </section>
+
+
+            <!-- =========================================
+                 OUTSTANDING BILL
+            ========================================== -->
+
+            <section class="report-panel" id="outstanding-panel">
+
+                <div class="panel-heading">
+
+                    <div class="panel-icon">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Outstanding Bill
+                        </h2>
+
+                        <p>
+                            Find unpaid or partially paid consignments
+                            and group them party-wise.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="outstanding-form" class="search-form">
+
+
+                    <div class="input-group">
+
+                        <label for="outstanding-from">
+                            From Date
+                        </label>
+
+                        <input id="outstanding-from" type="date" required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="outstanding-to">
+                            To Date
+                        </label>
+
+                        <input id="outstanding-to" type="date" required>
+
+                    </div>
+
+
+                    <button class="primary-btn" type="submit">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                        Generate Outstanding
+
+                    </button>
+
+                </form>
+
+
+                <div id="outstanding-result" class="result-area">
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 BILL TRACKER
+            ========================================== -->
+
+            <section class="report-panel" id="tracker-panel">
+
+                <div class="panel-heading">
+
+                    <div class="panel-icon">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Bill Tracker
+                        </h2>
+
+                        <p>
+                            Find every bill belonging to a particular
+                            party within a date range.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="tracker-form" class="search-form">
+
+
+                    <!-- PARTY -->
+
+                    <div class="input-group party-input-wrap">
+
+                        <label for="tracker-party">
+                            Party Name
+                        </label>
+
+                        <input id="tracker-party" type="text" placeholder="Enter party name" autocomplete="off"
+                            required>
+
+
+                        <!-- PARTY SUGGESTIONS -->
+
+                        <div id="tracker-suggestions" class="suggestions">
+                        </div>
+
+                    </div>
+
+
+                    <!-- FROM -->
+
+                    <div class="input-group">
+
+                        <label for="tracker-from">
+                            From Date
+                        </label>
+
+                        <input id="tracker-from" type="date" required>
+
+                    </div>
+
+
+                    <!-- TO -->
+
+                    <div class="input-group">
+
+                        <label for="tracker-to">
+                            To Date
+                        </label>
+
+                        <input id="tracker-to" type="date" required>
+
+                    </div>
+
+
+                    <button class="primary-btn" type="submit">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                       Search Bills
+
+                    </button>
+
+                </form>
+
+
+                <div id="tracker-result" class="result-area">
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 GENERATED BILLS
+            ========================================== -->
+
+            <section class="report-panel" id="generated-panel">
+
+                <div class="panel-heading">
+
+                    <div class="panel-icon">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Generated Bills
+                        </h2>
+
+                        
+                        <p>View and download generated bills by party name or C-Note number.</p>
+                        
+
+                    </div>
+
+                </div>
+
+
+                <form id="generated-form" class="search-form">
+
+
+                    <div class="input-group">
+                        <label for="generated-search">
+                            Party Name / C-Note No.
+                        </label>
+
+                        <input id="generated-search" type="text" placeholder="Search by party name or C-Note..."
+                            autocomplete="off">
+                    </div>
+
+                    <button class="primary-btn" type="submit">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        Find Bill
+
+                    </button>
+
+                </form>
+
+
+                <div id="generated-result" class="result-area">
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 REPORT PREVIEW
+            ========================================== -->
+
+            <section class="global-preview" id="global-preview">
+
+                <div class="empty-preview">
+
+                    <div class="empty-preview-icon">
+
+                        <i class="fa-solid fa-file-invoice"></i>
+
+                    </div>
+
+                    <h3>
+                        Report Preview
+                    </h3>
+
+                    <p>
+                        Your generated bill or report will appear here.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="reports-footer">
+
+                © 2026 Countrywide Logistics.
+                All rights reserved.
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- REPORTS JAVASCRIPT -->
+    <script src="js/auth-guard.js"></script>
+    <script src="js/reports.js"></script>
+    <script src="js/logout.js"></script>
+
+</body>
+
+</html>

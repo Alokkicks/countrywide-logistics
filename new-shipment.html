@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New Shipment | Countrywide Logistics</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- New Shipment CSS -->
+    <link rel="stylesheet" href="css/new-shipment.css">
+</head>
+
+<body>
+
+    <div class="new-shipment-page">
+
+
+
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+        ====================================================== -->
+
+        <main class="shipment-main">
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <header class="shipment-header">
+
+                <div class="header-left">
+
+                    <a href="employee-dashboard.html" class="back-button">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+
+                    <div class="header-title">
+
+                        <h1>New Builty</h1>
+
+                        <p>
+                            Create a new Builty quickly and easily.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="header-right">
+
+                    <span class="draft-status">
+                        <i class="fa-solid fa-circle"></i>
+                        Draft
+                    </span>
+
+                    <div class="current-date">
+                        <strong id="current-date">Loading...</strong>
+                        <span id="current-time">Loading...</span>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 FORM
+            ================================================== -->
+
+            <form id="new-shipment-form">
+
+
+                <!-- =================================================
+                     TOP TWO COLUMNS
+                ================================================== -->
+
+                <div class="shipment-grid">
+
+
+                    <!-- =================================================
+                         CUSTOMER INFORMATION
+                    ================================================== -->
+
+                    <section class="form-card">
+
+                        <div class="card-header">
+
+                            <div class="card-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+                                <h2>Customer Information</h2>
+
+                                <p>
+                                    Enter consignor / customer details
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="form-grid">
+
+
+                                <!-- Company Name -->
+
+
+
+
+                                <div class="form-group">
+                                    <label for="consignor">Consignor</label>
+                                    <input type="text" id="consignor" placeholder="Enter consignor name"
+                                        autocomplete="off">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="consignee">Consignee</label>
+                                    <input type="text" id="consignee" placeholder="Enter consignee name"
+                                        autocomplete="off">
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="cnote Type">
+                                        C-Note Type
+                                        <span>*</span>
+
+                                    </label>
+                                    <select id="cnote-type" required>
+
+                                        <option value="">
+                                            Select C-Note type
+                                        </option>
+
+                                        <option value="to-pay">
+                                            To Pay
+                                        </option>
+
+                                        <option value="to-billed">
+                                            To Billed
+                                        </option>
+
+                                        <option value="paid-bilty">
+                                            Paid Bilty
+                                        </option>
+
+                                        <option value="consignee-paid-adv">
+                                            Consignee Paid Adv.
+                                        </option>
+
+                                        <option value="foc-bilty">
+                                            FOC Bilty
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- GSTIN -->
+
+                                <!-- Consignor GSTIN -->
+
+                                <div class="form-group">
+
+                                    <label for="consignor-gstin">
+                                        Consignor GSTIN
+                                    </label>
+
+                                    <input type="text" id="consignor-gstin" placeholder="Enter Consignor GSTIN"
+                                        autocomplete="off">
+
+                                </div>
+
+
+                                <!-- Consignee GSTIN -->
+
+                                <div class="form-group">
+
+                                    <label for="consignee-gstin">
+                                        Consignee GSTIN
+                                    </label>
+
+                                    <input type="text" id="consignee-gstin" placeholder="Enter Consignee GSTIN"
+                                        autocomplete="off">
+
+                                </div>
+
+
+                                <!-- Billing Party -->
+
+                                <div class="form-group">
+
+                                    <label for="billing-party">
+                                        Billing Party
+                                        <span>*</span>
+                                    </label>
+
+                                    <select id="billing-party" required>
+
+                                        <option value="">
+                                            Select billing party
+                                        </option>
+
+                                        <option value="consignor">
+                                            Consignor
+                                        </option>
+
+                                        <option value="consignee">
+                                            Consignee
+                                        </option>
+
+                                        <option value="third-party">
+                                            Third Party
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         SHIPMENT INFORMATION
+                    ================================================== -->
+
+                    <section class="form-card">
+
+                        <div class="card-header">
+
+                            <div class="card-icon">
+                                <i class="fa-solid fa-truck"></i>
+                            </div>
+
+                            <div>
+                                <h2>Shipment Information</h2>
+
+                                <p>
+                                    Basic shipment details
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="form-grid">
+
+
+                                <!-- Tracking Number -->
+
+                                <!-- C Note Number -->
+
+                                <div class="form-group">
+
+                                    <label for="c-note-no">
+                                        C Note No.
+                                    </label>
+
+                                    <input type="text" id="c-note-no" placeholder="Enter C Note No." autocomplete="off">
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="invoice-no">
+                                        Invoice No.
+                                    </label>
+
+                                    <input type="text" id="invoice-no" placeholder="Enter Invoice No."
+                                        autocomplete="off">
+
+                                </div>
+
+
+                                <!-- Booking Date -->
+
+                                <div class="form-group">
+
+                                    <label for="booking-date">
+                                        Booking Date
+                                    </label>
+
+                                    <input type="date" id="booking-date">
+
+                                </div>
+
+
+                                <!-- Booking Branch -->
+
+                                <div class="form-group">
+
+                                    <label for="booking-branch">
+                                        Booking Branch
+                                        <span>*</span>
+                                    </label>
+
+                                    <select id="booking-branch" required>
+
+                                        <option value="">
+                                            Select branch
+                                        </option>
+
+                                        <option value="delhi">
+                                            Delhi
+                                        </option>
+
+                                        <option value="mumbai">
+                                            Mumbai
+                                        </option>
+
+                                        <option value="kolkata">
+                                            Kolkata
+                                        </option>
+
+                                        <option value="chennai">
+                                            Chennai
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Destination -->
+
+
+                                <div class="form-group">
+
+                                    <label for="booking-from">
+                                        origin
+                                        <span>*</span>
+                                    </label>
+
+                                    <select id="booking-from" required>
+
+                                        <option value="">
+                                            Select origin
+                                        </option>
+
+                                        <option value="delhi">
+                                            Delhi
+                                        </option>
+
+                                        <option value="mumbai">
+                                            Mumbai
+                                        </option>
+
+                                        <option value="kolkata">
+                                            Kolkata
+                                        </option>
+
+                                        <option value="chennai">
+                                            Chennai
+                                        </option>
+
+                                        <option value="chennai">
+                                            Gujarat
+                                        </option>
+                                        <option value="chennai">
+                                            JHARKHAND
+                                        </option>
+
+                                    </select>
+
+                                    <label for="destination">
+                                        Destination
+                                        <span>*</span>
+                                    </label>
+
+                                    <select id="destination" required>
+
+                                        <option value="">
+                                            Select Destination
+                                        </option>
+
+                                        <option value="delhi">
+                                            Delhi
+                                        </option>
+
+                                        <option value="mumbai">
+                                            Mumbai
+                                        </option>
+
+                                        <option value="kolkata">
+                                            Kolkata
+                                        </option>
+
+                                        <option value="chennai">
+                                            Chennai
+                                        </option>
+
+                                        <option value="chennai">
+                                            Gujarat
+                                        </option>
+
+                                    </select>
+                                   
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         GOODS INFORMATION
+                    ================================================== -->
+
+                    <section class="form-card">
+
+                        <div class="card-header">
+
+                            <div class="card-icon">
+                                <i class="fa-solid fa-cube"></i>
+                            </div>
+
+                            <div>
+                                <h2>Goods Information</h2>
+
+                                <p>
+                                    Add details about the goods
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="form-grid">
+
+
+                                <!-- Type of Goods -->
+
+                                <div class="form-group">
+
+                                    <label for="goods-search">
+                                        Type of Goods
+                                        <span>*</span>
+                                    </label>
+
+                                    <div class="goods-search-wrapper">
+
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                                        <input type="text" id="goods-search" placeholder="Search goods..."
+                                            autocomplete="off" required>
+
+                                        <div class="goods-search-results" id="goods-search-results"></div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Description -->
+
+                                <div class="form-group">
+
+                                    <label for="goods-description">
+                                        Description
+                                    </label>
+
+                                    <input type="text" id="goods-description"
+                                        placeholder="Enter description (optional)">
+
+                                </div>
+
+
+                                <!-- Actual Weight -->
+
+                                <div class="form-group">
+
+                                    <label for="actual-weight">
+                                        Actual Weight (kg)
+                                        <span>*</span>
+                                    </label>
+
+                                    <input type="number" id="actual-weight" min="0" step="0.01"
+                                        placeholder="Enter weight" required>
+
+                                </div>
+
+
+                                <!-- Chargeable Weight -->
+
+                                <div class="form-group">
+
+                                    <label for="chargeable-weight">
+                                        Chargeable Weight (kg)
+                                    </label>
+
+                                    <input type="number" id="chargeable-weight" placeholder="Auto calculated" readonly>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         PACKAGE INFORMATION
+                    ================================================== -->
+
+                    <section class="form-card">
+
+                        <div class="card-header">
+
+                            <div class="card-icon">
+                                <i class="fa-solid fa-box"></i>
+                            </div>
+
+                            <div>
+                                <h2>Package Information</h2>
+
+                                <p>
+                                    Enter package details
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="form-grid">
+
+
+                                <!-- Package Count -->
+
+                                <div class="form-group">
+
+                                    <label for="package-count">
+                                        Number of Packages
+                                        <span>*</span>
+                                    </label>
+
+                                    <input type="number" id="package-count" min="1" step="1"
+                                        placeholder="Enter quantity" required>
+
+                                </div>
+
+
+                                <!-- Package Type -->
+
+                                <div class="form-group">
+
+                                    <label for="package-type">
+                                        Package Type
+                                        <span>*</span>
+                                    </label>
+
+                                    <select id="package-type" required>
+
+                                        <option value="">
+                                            Select type
+                                        </option>
+
+                                        <option value="carton">
+                                            Carton
+                                        </option>
+
+                                        <option value="sack">
+                                            Sack
+                                        </option>
+
+                                        <option value="bag">
+                                            Bag
+                                        </option>
+
+                                        <option value="box">
+                                            Box
+                                        </option>
+
+                                        <option value="other">
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Package Mode -->
+
+                                <div class="form-group">
+
+                                    <label for="package-mode">
+                                        Package Mode
+                                    </label>
+
+                                    <select id="package-mode">
+
+                                        <option value="">
+                                            Select mode
+                                        </option>
+
+                                        <option value="standard">
+                                            Standard
+                                        </option>
+
+                                        <option value="fragile">
+                                            Fragile
+                                        </option>
+
+                                        <option value="special">
+                                            Special Handling
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         CHARGES & BILLING
+                    ================================================== -->
+
+                    <section class="form-card charges-card">
+
+                        <div class="card-header">
+
+                            <div class="card-icon">
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                            </div>
+
+                            <div>
+                                <h2>Charges & Billing</h2>
+
+                                <p>
+                                    Calculate shipment charges
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="charges-grid">
+
+                                <!-- Freight Rate -->
+
+                                <div class="form-group">
+
+                                    <label for="freight-rate">
+                                        Freight Rate (₹ / kg)
+                                        <span>*</span>
+                                    </label>
+
+                                    <div class="amount-input">
+
+                                        <span>₹</span>
+
+                                        <input type="number" id="freight-rate" min="0" step="0.01"
+                                            placeholder="Enter rate" required>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- S.T. Charge -->
+
+                                <div class="form-group">
+
+                                    <label for="st-charge">
+                                        S.T. Charge
+                                    </label>
+
+                                    <div class="amount-input">
+
+                                        <span>₹</span>
+
+                                        <input type="number" id="st-charge" min="100" placeholder="100" readonly>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Delivery Charge -->
+
+                                <div class="form-group">
+
+                                    <label for="delivery-charge">
+                                        Delivery Charge
+                                    </label>
+
+                                    <div class="amount-input">
+
+                                        <span>₹</span>
+
+                                        <input type="number" id="delivery-charge" min="0">
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Labour Charge -->
+
+                                <div class="form-group">
+
+                                    <label for="labour-charge">
+                                        Labour Charge
+                                    </label>
+
+                                    <div class="amount-input">
+
+                                        <span>₹</span>
+
+                                        <input type="number" id="labour-charge" min="0">
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Other Charges -->
+
+                                <div class="form-group">
+
+                                    <label for="other-charges">
+                                        Other Charges
+                                    </label>
+
+                                    <div class="amount-input">
+
+                                        <span>₹</span>
+
+                                        <input type="number" id="other-charges" min="0">
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Adjustment -->
+
+                                <div class="form-group">
+
+                                    <label for="adjustment">
+                                        Adjustment (+/-)
+                                    </label>
+
+                                    <div class="amount-input">
+
+                                        <span>₹</span>
+
+                                        <input type="number" id="adjustment">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================================
+                         BILL SUMMARY
+                    ================================================== -->
+
+                    <section class="form-card bill-summary-card">
+
+                        <div class="card-header">
+
+                            <div class="card-icon">
+                                <i class="fa-solid fa-file-invoice"></i>
+                            </div>
+
+                            <div>
+                                <h2>Bill Summary</h2>
+
+                                <p>
+                                    Calculated automatically
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="bill-summary">
+                                <div class="bill-row">
+                                    <span>Freight Amount</span>
+                                    <strong id="summary-freight">₹ 0.00</strong>
+                                </div>
+
+                                <div class="bill-row">
+                                    <span>S.T. Charge</span>
+                                    <strong id="summary-st">₹ 100.00</strong>
+                                </div>
+
+                                <div class="bill-row">
+                                    <span>Delivery Charge</span>
+                                    <strong id="summary-delivery">₹ 0.00</strong>
+                                </div>
+
+                                <div class="bill-row">
+                                    <span>Labour Charge</span>
+                                    <strong id="summary-labour">₹ 0.00</strong>
+                                </div>
+
+                                <div class="bill-row">
+                                    <span>Other Charges</span>
+                                    <strong id="summary-other">₹ 0.00</strong>
+                                </div>
+
+                                <div class="bill-row">
+                                    <span>Adjustment</span>
+                                    <strong id="summary-adjustment">₹ 0.00</strong>
+                                </div>
+                                <div class="bill-total">
+                                    <h4>Total :</h4>
+                                    <strong id="total-amount">₹ 0.00</strong>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FORM ACTIONS
+                ================================================== -->
+
+                <div class="form-actions">
+
+                    <a href="employee-dashboard.html" class="cancel-btn">
+                        Cancel
+                    </a>
+
+
+                    <button type="button" id="save-draft-btn" class="save-draft-btn">
+                        <i class="fa-regular fa-floppy-disk"></i>
+                        Save Draft
+                    </button>
+
+
+                    <button type="submit" id="create-shipment-btn" class="create-shipment-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Create Shipment
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+    <script src="js/auth-guard.js"></script>
+    <script src="js/new-shipment.js"></script>
+
+</body>
+
+</html>

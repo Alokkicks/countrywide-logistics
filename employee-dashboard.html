@@ -11,64 +11,149 @@
 
 <body>
     <div class="dashboard">
+
+
         <aside class="sidebar">
-            <div class="logo">
-                <h2>COUNTRYWIDE LOGISTICS</h2>
-                <p>LOGISTICS MANAGEMENT SYSTEM</p>
+
+            <!-- LOGO -->
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+
+                <div class="sidebar-logo-text">
+                    <h2>COUNTRYWIDE</h2>
+                    <span>LOGISTICS</span>
+                </div>
             </div>
 
+
+            <!-- NAVIGATION -->
             <nav class="sidebar-nav">
-                <a href="#" class="active">Dashboard</a>
-                <a href="#">Shipments</a>
-                <a href="#">My Tasks</a>
-                <a href="#">Deliveries</a>
-                <a href="#">Tracking</a>
-                <a href="#">Reports</a>
-                <a href="#">Messages</a>
-                <a href="#">Settings</a>
+
+                <a href="employee-dashboard.html" class="active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="new-shipment.html">
+                    <i class="fa-solid fa-box"></i>
+                    <span>New Shipment</span>
+                </a>
+
+                <a href="shipments.html">
+                    <i class="fa-solid fa-clipboard"></i>
+                    <span>Shipments</span>
+                </a>
+
+                <a href="manifest.html">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Manifest</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <span>Deliveries</span>
+                </a>
+
+                <a href="tracking.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Tracking</span>
+                </a>
+
+                <a href="reports.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Reports</span>
+                </a>
+
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
 
             </nav>
-            <div class="log-out">
-                <span class="Log-out">Logout</span>
-
-                <i class="fa-solid fa-power-off"></i>
 
 
+            <!-- PROFILE -->
+            <div class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    CM
+                </div>
+
+                <div class="profile-details">
+                    <strong>Countrywide Logistics</strong>
+                    <span>Employee</span>
+                </div>
 
             </div>
 
 
+            <!-- LOGOUT -->
+            <a href="#" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
         </aside>
+
         <main class="main-content">
             <nav class="top-navbar">
-                <div class="menu-icon">
-                    ☰
-                </div>
-                <div class="search-bar">
-                    <span class="search-icon">⌕</span>
-                    <input type="text" placeholder="Search shipments,tasks,deliveries...">
-                </div>
+
+
                 <div class="navbar-right">
-                    <div class="notification">
+                    <div class="notification" id="notification">
                         <i class="fa-regular fa-bell"></i>
-                        <span class="notification-count">14</span>
+                        <span class="notification-count" id="notification-count">0</span>
+
+                        <div class="notification-dropdown" id="notification-dropdown">
+
+                            <div class="notification-header">
+                                <h3>Notifications</h3>
+                                <span id="notification-new-count">0 New</span>
+                            </div>
+                            <div id="notification-list">
+                                <div class="notification-item">
+                                    <i class="fa-solid fa-bell"></i>
+                                   
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="employee-info">
+                    <div class="employee-info" id="employee-info">
                         <div class="employee-details">
-                            <h4>Alok Mishra</h4>
+                            <h4>Countrywide Logistics</h4>
                             <span>Employee</span>
                         </div>
-                        <div class="dropdown-arrow">⌄</div>
+                        <div class="dropdown-arrow">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="employee-dropdown" id="employee-dropdown">
+                            <button id="profile-btn">
+                                <i class="fa-solid fa-user"></i>
+                                Profile
+                            </button>
+                            <button id="settings-btn">
+                                <i class="fa-solid fa-gear"></i>
+                                Settings
+                            </button>
+                            <button id="logout-btn">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Logout
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </nav>
             <header class="top-header">
                 <div class="welcome-section">
-                    <h1>Welcome Back,Alok</h1>
+                    <h1>Welcome Back!</h1>
                     <p>Here's what's happening with your work today</p>
                 </div>
-                <div class="date">
-                    Saturday , 27th Aug2026
+                <div class="date" id="current-date">
+
                 </div>
             </header>
 
@@ -78,32 +163,32 @@
                     <div class="stat-info">
 
                         <p>Total Shipments</p>
-                        <h2>48</h2>
-                        <span class="positive">↑ 12% from last week</span>
+                        <h2 id="total-shipments">48</h2>
+
                     </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">📋</div>
                     <div class="stat-info">
                         <p>Pending Tasks</p>
-                        <h2>21</h2>
-                        <span class="negative">↓ 5% from last week</span>
+                        <h2 id="pending-tasks">21</h2>
+
                     </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">✓</div>
                     <div class="stat-info">
                         <p>Completed Deliveries</p>
-                        <h2>102</h2>
-                        <span class="positive">↑ 18% from last week</span>
+                        <h2 id="completed-deliveries">102</h2>
+
                     </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">🚚</div>
                     <div class="stat-info">
                         <p>In Transit</p>
-                        <h2>55</h2>
-                        <span class="No Change">No Change</span>
+                        <h2 id="in-transit">55</h2>
+
                     </div>
                 </div>
             </section>
@@ -111,9 +196,9 @@
                 <section class="recent-shipments">
                     <div class="section-heading">
                         <h2>Recent Shipments</h2>
-                        <a href="#">View All →</a>
+                        <a href="shipments.html">View All →</a>
                     </div>
-                    
+
                     <table>
                         <thead>
                             <tr>
@@ -125,87 +210,128 @@
                             </tr>
                         </thead>
 
-                        <tbody>
-                            <tr>
-                                <td>CW-1024</td>
-                                <td>Kolkata</td>
-                                <td>Mumbai</td>
-                                <td>28 may 2026</td>
-                                <td>In Transit</td>
-                            </tr>
-                            <tr>
-                                <td>CW-1087</td>
-                                <td>Mumbai</td>
-                                <td>Delhi</td>
-                                <td>30 June 2026</td>
-                                <td>Pending</td>
-                            </tr>
-                            <tr>
-                                <td>CW-1092</td>
-                                <td>Delhi</td>
-                                <td>Bangalore</td>
-                                <td>14 Aug 2026</td>
-                                <td>Delivered</td>
-                            </tr>
+                        <tbody id="recent-shipments-body">
+
                         </tbody>
                     </table>
                 </section>
                 <section class="action-required">
                     <div class="section-heading">
                         <h2>Action Required</h2>
-                        <a href="#">View All →</a>
-                    </div>
-                    <div class="task">
-                        <p>Verify shipment CW-1024</p>
-                        <span class="status pending">Pending</span>
-                    </div>
 
-                    <div class="task">
-                        <p>Update Delivery Status</p>
-                        <span class="status in-transit">In progress</span>
                     </div>
+                    <div id="action-required-list">
 
-                    <div class="task">
-                        <p>Track shipment CW-1084</p>
-                        <span class="status pending">In Transit</span>
                     </div>
-
-                    <div class="task">
-                        <p>Check warehouse inventory</p>
-                        <span class="status pending">Pending</span>
-                    </div>
-
 
                 </section>
                 <div class="quick-actions-card">
                     <h3>Quick Actions</h3>
                     <div class="actions-grid">
-                        <button class="action-button">
+                        <a href="new-shipment.html" class="action-button">
                             <i class="fa-solid fa-plus"></i>
                             <span>New Shipment</span>
-                        </button>
-                        <button class="action-button">
+                        </a>
+                        <button class="action-button" id="track-shipment-btn">
                             <i class="fa-solid fa-search"></i>
                             <span>Track Shipment</span>
                         </button>
-                        <button class="action-button">
+                        <button type="button" class="action-button" id="update-status-btn">
                             <i class="fa-solid fa-file"></i>
                             <span>Update Delivery Status</span>
                         </button>
-                        <button class="action-button">
+                        <button class="action-button" id="view-bill-btn">
                             <i class="fa-solid fa-file-lines"></i>
                             <span>View Builty</span>
+
+
                         </button>
 
 
                     </div>
                 </div>
+                <section class="update-status-panel" id="update-status-panel">
+
+                    <div class="status-modal-content">
+
+                        <div class="update-status-header">
+
+                            <div>
+                                <p class="section-tag">SHIPMENT MANAGEMENT</p>
+
+                                <h2>Update Delivery Status</h2>
+
+                                <p>
+                                    Select a shipment and update its current delivery status.
+                                </p>
+                            </div>
+
+                            <button type="button" id="close-update-status-btn">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="status-form">
+
+                            <div class="form-group">
+
+                                <label for="shipment-select">
+                                    Select Shipment
+                                </label>
+
+                                <select id="shipment-select">
+                                    <option value="">
+                                        Select a shipment
+                                    </option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="new-status">
+                                    New Status
+                                </label>
+
+                                <select id="new-status">
+
+                                    <option value="">
+                                        Select new status
+                                    </option>
+
+                                    <option value="Pending">
+                                        Pending
+                                    </option>
+
+                                    <option value="In Transit">
+                                        In Transit
+                                    </option>
+
+                                    <option value="Delivered">
+                                        Delivered
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <button type="button" id="save-status-btn">
+                                Update Status
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
 
             </div>
-            <section class="bottom-section">
 
 
-            </section>
 
 
 
@@ -213,17 +339,21 @@
 
         </main>
     </div>
+    <footer class="dashboard-footer">
+
+        <p>© 2026 Countrywide Logistics. All rights reserved.</p>
+
+        <p>
+            Need help?
+            <a href="#">Contact Support</a>
+        </p>
+    </footer>
+
+
+    <script src="js/auth-guard.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/notifications.js"></script>
+
 </body>
-
-<footer class="dashboard-footer">
-
-    <p>© 2026 Countrywide Logistics. All rights reserved.</p>
-
-    <p>
-        Need help?
-        <a href="#">Contact Support</a>
-    </p>
-</footer>
-
 
 </html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manifest | Countrywide Logistics</title>
+
+    <link rel="stylesheet" href="css/manifest.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+    <div class="manifest-page">
+
+        <!-- ==========================================
+             HEADER
+        =========================================== -->
+
+        <header class="manifest-header">
+
+            <div>
+
+                <p class="section-tag">
+                    SHIPMENT MANAGEMENT
+                </p>
+
+                <h1>
+                    Manifest
+                </h1>
+
+                <p class="header-description">
+                    Create a manifest by assigning existing shipments
+                    to a Challan / VPH number.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==========================================
+             CREATE MANIFEST
+        =========================================== -->
+
+        <section class="manifest-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        Create Manifest
+                    </h2>
+
+                    <p>
+                        Enter manifest information and select
+                        the shipments to be included.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MANIFEST DETAILS -->
+
+            <div class="manifest-details-grid">
+
+                <div class="form-group">
+
+                    <label for="challan-number">
+                        Challan / VPH No.
+                    </label>
+
+                    <input type="text" id="challan-number" placeholder="Enter Challan / VPH number">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="manifest-date">
+                        Date
+                    </label>
+
+                    <input type="date" id="manifest-date">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="manifest-from">
+                        From
+                    </label>
+
+                    <input type="text" id="manifest-from" placeholder="Enter origin">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="manifest-to">
+                        To
+                    </label>
+
+                    <input type="text" id="manifest-to" placeholder="Enter destination">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="manifest-branch">
+                        Branch
+                    </label>
+
+                    <input type="text" id="manifest-branch" placeholder="Enter branch">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="train-name">
+                        Train / Vehicle
+                    </label>
+
+                    <input type="text" id="train-name" placeholder="Enter train / vehicle">
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 SHIPMENT SELECTION
+            =========================================== -->
+
+            <div class="shipment-selection">
+
+                <div class="selection-header">
+
+                    <div>
+
+                        <h3>
+                            Assign Shipments
+                        </h3>
+
+                        <p id="selected-count">
+                            0 shipments selected
+                        </p>
+
+                    </div>
+
+                    <button type="button" id="load-shipments-btn" class="secondary-btn">
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        Load Shipments
+
+                    </button>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="shipment-search">
+
+                    <i class="fa-solid fa-search"></i>
+
+                    <input type="text" id="manifest-shipment-search"
+                        placeholder="Search C-Note, customer or destination...">
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    <input type="checkbox" id="select-all-shipments">
+                                </th>
+
+                                <th>
+                                    C-Note / Tracking
+                                </th>
+
+                                <th>
+                                    Customer
+                                </th>
+
+                                <th>
+                                    Destination
+                                </th>
+
+                                <th>
+                                    Weight
+                                </th>
+
+                                <th>
+                                    Packages
+                                </th>
+
+                                <th>
+                                    Amount
+                                </th>
+                                
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="manifest-shipments-body">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div id="manifest-empty-state" class="empty-state">
+
+                    No available shipments found.
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 ACTIONS
+            =========================================== -->
+
+            <div class="manifest-actions">
+
+                <button type="button" id="create-manifest-btn" class="primary-btn">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Create Manifest
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FIND EXISTING MANIFEST
+        =========================================== -->
+
+        <section class="manifest-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        Find Manifest
+                    </h2>
+
+                    <p>
+                        Enter an existing Challan / VPH number
+                        to retrieve its shipments.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="find-manifest-row">
+
+                <input type="text" id="find-challan-number" placeholder="Enter Challan / VPH number">
+
+                <button type="button" id="find-manifest-btn" class="primary-btn">
+
+                    <i class="fa-solid fa-search"></i>
+
+                    Find Manifest
+
+                </button>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div id="manifest-result" class="manifest-result">
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="js/auth-guard.js"></script>
+    <script src="js/manifest.js"></script>
+
+</body>
+
+</html>
